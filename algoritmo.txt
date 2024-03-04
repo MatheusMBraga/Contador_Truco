@@ -1,0 +1,20 @@
+Contador de pontos de truco
+
+Dois contadores de pontos, um para cada equipe, azul e vermelha (nome possivelmente alteravel).
+
+nome da equipe: Azul ou vermelha (alteravel)
+
+mostrador de pontos
+
+botão que adiciona + 1 ponto 
+
+btn TRUCO -> adiciona + 3 pontos
+
+A aquipe que atingir 12 pontos aparecerá como vencedora 
+
+EQUIPE _________ GANHOU!
+
+
+FIM
+
+ 

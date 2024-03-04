@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de pontos</title>
+    <link rel="stylesheet" type="text/css" href="styles/estilo.css" />
+</head>
+<body>
+    
+    <header>
+        <h1>CONTADOR TRUCO</h1>
+    </header>
+    </br>
+    <section>
+        <!--PLACAR AZUL-->
+        <div class="caixa_contador1">
+        </br>
+            <!--Nome da Equipe:-->
+           <input type="text" class="NomeEquipe" id="Equipe1" value="">
+        </br></br></br>
+        <!--Botoes +, - e input do contador -->
+            <div class="alinhaBTN-CONT">
+                <button class="btnA" id="btn-1A">-</button>
+                <input id="contador1" type="text" value="0">
+                <button class="btnA" id="btn+1A">+</button>
+            </div>
+        </br>
+            <!--Botão truco -->
+            <button id="btnTrucoA">TRUCO</button>
+        </div>
+       
+        <!--PLACAR VERMELHA-->
+        <div class="caixa_contador2">
+        </br>
+             <!--Nome da Equipe:-->
+            <input type="text" class="NomeEquipe" id="Equipe2" value="">
+        </br></br></br>
+        <!--Botoes +, - e input do contador -->
+            <div class="alinhaBTN-CONT">
+                <button class="btnV" id="btn-1V">-</button>
+                <input id="contador2" type="text" value="0">
+                <button class="btnV" id="btn+1V">+</button>
+            </div>
+            
+            <!--Botão truco -->
+        </br>
+            <button id="btnTrucoV">TRUCO</button>
+        </div>
+
+    </section>
+</br></br></br>
+    <footer>
+        <div>
+            <p> Redes sociais</p>
+    
+            <a href="https://www.instagram.com/mathh__moura/">  <img src="imagens/instagram_logo.png"> </a>
+            <a href="https://www.linkedin.com/in/matheus-de-moura-braga-17b732256/"><img src="imagens/Linkedin_logo.png"></a>
+            <a href="https://github.com/MatheusMBraga"><img src="imagens/github_logo.png"></a>
+        </div>
+            
+    </footer>
+    <script>
+            // Equipe Azul - botões de 1 a 3(btn#) + contador 1
+        var contador1 = document.getElementById('contador1');
+        const btn1 = document.getElementById('btn+1A');
+        const btn2 = document.getElementById('btn-1A');
+        const btn3 = document.getElementById('btnTrucoA');
+        var Equipe1 = document.getElementById('Equipe1');
+        Equipe1.placeholder = "Nome da Equipe";
+        
+        function verificarVitoria1 (valor) {
+            if (valor === 12) {
+                var Equipe1 = document.getElementById('Equipe1')
+                var EquipeNome = Equipe1.value || Equipe1.placeholder;
+                window.alert(`${EquipeNome} ganhou!!!`);
+        }};
+        
+        // Botão ADD +1 ponto
+        btn1.addEventListener('click', ( ) => {
+            var valorAtual = parseFloat(contador1.value);
+            var novoValor = valorAtual !== 12? valorAtual + 1: 12;
+            contador1.value = novoValor;
+
+            verificarVitoria1(novoValor);
+        });
+
+        // Botão REMOVE - 1 ponto
+        btn2.addEventListener('click', ( ) => {
+            var valorAtual = parseFloat(contador1.value);
+            var novoValor = valorAtual + 1;
+            novoValor = valorAtual !== 0? valorAtual - 1: 0;
+            contador1.value = novoValor;   
+
+            verificarVitoria1(novoValor);
+        });
+
+        // Botão truco ADD +3 pontos
+        btn3.addEventListener('click', function ( ){
+            var valorAtual = parseFloat(contador1.value);
+            var novoValor = valorAtual !== 12? valorAtual + 3: 12;
+            contador1.value = novoValor;
+
+            verificarVitoria1(novoValor);
+        });
+
+            // Equipe Azul - botões de 4 a 6(btn#) + contador 2
+        var contador2 = document.getElementById('contador2');
+        const btn4 = document.getElementById('btn+1V');
+        const btn5 = document.getElementById('btn-1V');
+        const btn6 = document.getElementById('btnTrucoV');
+        var Equipe2 = document.getElementById('Equipe2');
+        Equipe2.placeholder = "Nome da Equipe";
+
+        // Função para verificar se o jogador 2 ganhou
+        function verificarVitoria(valor) {
+            if (valor === 12) {
+                var EquipeNome = Equipe2.value || Equipe2.placeholder;
+                window.alert(`${EquipeNome} ganhou!!!`);
+        }};
+    
+        // Botão ADD +1 ponto
+        btn4.addEventListener('click', () => {
+            var valorAtual = parseFloat(contador2.value);
+            var novoValor = valorAtual !== 12 ? valorAtual + 1 : 12;
+            contador2.value = novoValor;
+            verificarVitoria(novoValor);
+        });
+
+        // Botão REMOVE - 1 ponto
+        btn5.addEventListener('click', () => {
+            var valorAtual = parseFloat(contador2.value);
+            var novoValor = valorAtual !== 0 ? valorAtual - 1 : 0;
+            contador2.value = novoValor;
+            verificarVitoria(novoValor);
+        });
+
+        // Botão truco ADD +3 pontos
+        btn6.addEventListener('click', () => {
+            var valorAtual = parseFloat(contador2.value);
+            var novoValor = valorAtual !== 12 ? valorAtual + 3 : 12;
+            contador2.value = novoValor;
+            verificarVitoria(novoValor);
+        });
+    </script>
+    
+</body>
+</html>

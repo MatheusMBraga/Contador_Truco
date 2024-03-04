@@ -1,0 +1,176 @@
+body {
+    font: normal 20px arial;
+    color:aliceblue;
+    background: linear-gradient(to right,#696969,#4b4b4b,#4b4b4b, #696969);
+    align-items: center;
+}
+header {
+    text-align: center;
+    margin-top: 5%;
+
+
+}
+
+section{ 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 30rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.NomeEquipe{
+    font-family: arial;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color:rgb(92, 92, 92);
+    border-bottom: 3px solid rgb(85, 85, 85);
+    border-left: 3px solid rgb(92, 92, 92);
+    border-top: 3px solid rgb(85, 85, 85);
+    border-right:3px solid rgb(92, 92, 92);
+    width: 15rem;
+    height: 3rem;
+
+}
+
+.alinhaBTN-CONT {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+
+button {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    cursor: pointer;
+    opacity: 70%;
+ 
+}
+
+/* Botoes adição e subtracão*/
+.btnA {
+    background-color:#4c2be2 ;
+    height: 7.5rem;
+    width: 6rem;
+    border-top: 5px solid#4425cf;
+    border-right: 5px solid#4425cf;
+    border-bottom: 3px solid rgb(49, 49, 49);
+    border-left: 3px solid rgb(49, 49, 49);
+    
+}
+.btnV {
+    background-color:#d62626 ;
+    height: 7.5rem;
+    width: 6rem;
+    border-top: 5px solid#bb2222;
+    border-right: 5px solid#bb2222;
+    border-bottom: 3px solid rgb(49, 49, 49);
+    border-left: 3px solid rgb(49, 49, 49);
+}
+
+/*Botao truco*/
+#btnTrucoA {
+    background-color:#4c2be2 ;
+    border-top: 5px solid#4425cf;
+    border-right: 5px solid#4425cf;
+    border-bottom: 3px solid rgb(49, 49, 49);
+    border-left: 3px solid rgb(49, 49, 49);
+}
+#btnTrucoV{
+    background-color:#d62626 ;
+    border-top: 5px solid#bb2222;
+    border-right: 5px solid#bb2222;
+    border-bottom: 3px solid rgb(49, 49, 49);
+    border-left: 3px solid rgb(49, 49, 49);
+}
+
+
+/* Div placar Azul*/
+.caixa_contador1{
+    background: rgb(92, 92, 92);
+    margin: 40px;
+    padding: 2vh;
+    border-bottom: 3px solid rgb(49, 49, 49);
+    border-left: 3px solid rgb(49, 49, 49);
+    box-shadow: 0 0 1rem rgb(0, 0, 0);
+}
+/* Div placar Vermelho*/
+.caixa_contador2{
+    background: rgb(92, 92, 92);
+    margin: 40px;
+    padding: 2vh;
+    border-bottom: 3px solid rgb(48, 48, 48);
+    border-left: 3px solid rgb(48, 48, 48);
+    box-shadow: 0 0 1rem rgb(0, 0, 0);
+}
+
+/* placar Azul*/
+#contador1 {
+    background-color:rgb(92, 92, 92);
+    font-size: 5rem;
+    text-align: center;
+    width: 7rem;
+    height: 7rem;
+    border-bottom: 3px solid rgb(85, 85, 85);
+    border-left: 3px solid rgb(92, 92, 92);
+    border-top: 3px solid rgb(85, 85, 85);
+    border-right:3px solid rgb(92, 92, 92);
+    text-shadow: 0 0 1rem #4c2be2;
+}
+
+/*  placar Vermelho*/
+#contador2 {
+    background-color:rgb(92, 91, 91);
+    font-size: 5rem;
+    text-align: center;
+    width: 7rem;
+    height: 7rem;
+    border-bottom: 3px solid rgb(85, 85, 85);
+    border-left: 3px solid rgb(92, 92, 92);
+    border-top: 3px solid rgb(85, 85, 85);
+    border-right:3px solid rgb(92, 92, 92);
+    text-shadow: 0 0 1rem #bb2222;
+}
+
+
+/* Estilo para o bloco de redes sociais dentro do footer */
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 3px solid white;
+    margin-left: 14%;
+    margin-right: 14%;
+   align-items: end;
+}
+p {
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    border-right:2px solid white ;
+    padding-right: 15px;
+    
+}
+
+/* alinhamento das imagens de redes sociais */
+footer img {
+    width: 48px;
+    height: 45px;
+    margin: 10px;
+    
+}
