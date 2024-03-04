@@ -61,14 +61,15 @@
             
     </footer>
     <script>
-            // Equipe Azul - botões de 1 a 3(btn#) + contador 1
-        var contador1 = document.getElementById('contador1');
+            // Equipe Azul -- botões de 1 a 3(btn#) + contador 1
+        const contador1 = document.getElementById('contador1');
         const btn1 = document.getElementById('btn+1A');
         const btn2 = document.getElementById('btn-1A');
         const btn3 = document.getElementById('btnTrucoA');
         var Equipe1 = document.getElementById('Equipe1');
-        Equipe1.placeholder = "Nome da Equipe";
+        Equipe1.placeholder = "Nome da equipe";
         
+        // Função para verificar se o jogador 1 ganhou 
         function verificarVitoria1 (valor) {
             if (valor === 12) {
                 var Equipe1 = document.getElementById('Equipe1')
@@ -104,13 +105,13 @@
             verificarVitoria1(novoValor);
         });
 
-            // Equipe Azul - botões de 4 a 6(btn#) + contador 2
-        var contador2 = document.getElementById('contador2');
+            // Equipe Azul -- botões de 4 a 6(btn#) + contador 2
+        const contador2 = document.getElementById('contador2');
         const btn4 = document.getElementById('btn+1V');
         const btn5 = document.getElementById('btn-1V');
         const btn6 = document.getElementById('btnTrucoV');
         var Equipe2 = document.getElementById('Equipe2');
-        Equipe2.placeholder = "Nome da Equipe";
+        Equipe2.placeholder = "Nome da equipe";
 
         // Função para verificar se o jogador 2 ganhou
         function verificarVitoria(valor) {
