@@ -22,11 +22,11 @@ section{
     left: 50%;
     transform: translate(-50%, -50%); 
 }
-
+/* inserir nome da equipe*/
 .NomeEquipe{
     font-family: arial;
     font-size: 25px;
-    color: rgb(0, 0, 0);
+    color: aliceblue;
     text-align: center;
     background-color:rgb(92, 92, 92);
     border-bottom: 3px solid rgb(85, 85, 85);
@@ -35,9 +35,54 @@ section{
     border-right:3px solid rgb(92, 92, 92);
     width: 15rem;
     height: 3rem;
-
+    outline: none;
 }
 
+/* icone de ajuda e input de nome */
+.meuElemento {
+    display: flex;
+    align-items: center;
+}
+
+/* mensagem do popup 1*/
+#popup1 {
+    display: none;
+    position: absolute;
+    top: 0; /* Posicionado no topo */
+    left: 0; /* Posicionado à esquerda */
+    background-color: rgb(92, 92, 92);
+    background-color:rgb(92, 92, 92);
+    border-bottom: 3px solid aliceblue;
+    border-left: 3px solid rgb(92, 92, 92);
+    border-top: 3px solid aliceblue;
+    border-right:3px solid rgb(92, 92, 92);
+    padding: 10px;
+    z-index: 999;
+}
+
+/* mensagem do popup 2*/
+#popup2 {
+    display: none;
+    position: absolute;
+    top: 0; /* Posicionado no topo */
+    right: 0; /* Posicionado à esquerda */
+    background-color: rgb(92, 92, 92);
+    background-color:rgb(92, 92, 92);
+    border-bottom: 3px solid aliceblue;
+    border-left: 3px solid rgb(92, 92, 92);
+    border-top: 3px solid aliceblue;
+    border-right:3px solid rgb(92, 92, 92);
+    padding: 10px;
+    z-index: 999;
+}
+
+/* ajuste de imagem de exclamação*/
+.exclamação{
+    width: 30px;
+    height: 28px;
+    margin-right: 10px;
+
+}
 .alinhaBTN-CONT {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -115,6 +160,7 @@ button {
 
 /* placar Azul*/
 #contador1 {
+    
     background-color:rgb(92, 92, 92);
     font-size: 5rem;
     text-align: center;
@@ -125,6 +171,7 @@ button {
     border-top: 3px solid rgb(85, 85, 85);
     border-right:3px solid rgb(92, 92, 92);
     text-shadow: 0 0 1rem #4c2be2;
+    outline: none;
 }
 
 /*  placar Vermelho*/
@@ -139,6 +186,7 @@ button {
     border-top: 3px solid rgb(85, 85, 85);
     border-right:3px solid rgb(92, 92, 92);
     text-shadow: 0 0 1rem #bb2222;
+    outline: none;
 }
 
 

@@ -17,29 +17,50 @@
         <div class="caixa_contador1">
         </br>
             <!--Nome da Equipe:-->
-           <input type="text" class="NomeEquipe" id="Equipe1" value="">
-        </br></br></br>
+            <div class="meuElemento">
+                <div id="meuElemento1">
+                    <img class="exclamação" src="imagens/pontoexclamação.png">
+                </div>
+                <div> 
+                    <input type="text" class="NomeEquipe" id="Equipe1" value="" maxlength="15"> 
+                </div>
+            </div>
+        </br></br>
         <!--Botoes +, - e input do contador -->
             <div class="alinhaBTN-CONT">
                 <button class="btnA" id="btn-1A">-</button>
-                <input id="contador1" type="text" value="0">
+                <input id="contador1" type="text" value="0" readonly>
                 <button class="btnA" id="btn+1A">+</button>
             </div>
         </br>
             <!--Botão truco -->
             <button id="btnTrucoA">TRUCO</button>
         </div>
-       
+        
+        <!-- MENSAGEM DO POPUP EQUIPE 1-->
+        <div id="popup1">
+            Insira o nome da sua equipe
+        </div>
+        <!-- MENSAGEM DO POPUP EQUIPE 2-->
+        <div id="popup2">
+            Insira o nome da sua equipe
+        </div>
+
         <!--PLACAR VERMELHA-->
         <div class="caixa_contador2">
         </br>
              <!--Nome da Equipe:-->
-            <input type="text" class="NomeEquipe" id="Equipe2" value="">
-        </br></br></br>
+             <div class="meuElemento">
+                <div id="meuElemento2">
+                    <img class="exclamação" src="imagens/pontoexclamação.png">
+                </div>
+                <div> <input type="text" class="NomeEquipe" id="Equipe2" value="" maxlength="15"> </div>
+            </div>
+        </br></br>
         <!--Botoes +, - e input do contador -->
             <div class="alinhaBTN-CONT">
                 <button class="btnV" id="btn-1V">-</button>
-                <input id="contador2" type="text" value="0">
+                <input id="contador2" type="text" value="0" readonly>
                 <button class="btnV" id="btn+1V">+</button>
             </div>
             
@@ -61,6 +82,33 @@
             
     </footer>
     <script>
+        // MENSAGEM POPUP
+        var elemento1 = document.getElementById('meuElemento1');
+        var popup1 = document.getElementById('popup1');
+        
+        // POPUP AZUL
+        elemento1.addEventListener('mouseover', function() {
+         // Exibir a caixa de mensagem
+            popup1.style.display = 'block';
+        });
+        elemento1.addEventListener('mouseout', function() {
+            // Ocultar a caixa de mensagem 
+            popup1.style.display = 'none';
+        });
+
+        //POPUP VERMELHO 
+        var elemento2 = document.getElementById('meuElemento2');
+        var popup2 = document.getElementById('popup2');
+
+         elemento2.addEventListener('mouseover', function() {
+         // Exibir a caixa de mensagem
+            popup2.style.display = 'block';
+        });
+        elemento2.addEventListener('mouseout', function() {
+            // Ocultar a caixa de mensagem 
+            popup2.style.display = 'none';
+        });
+        
             // Equipe Azul -- botões de 1 a 3(btn#) + contador 1
         const contador1 = document.getElementById('contador1');
         const btn1 = document.getElementById('btn+1A');
@@ -77,33 +125,47 @@
                 window.alert(`${EquipeNome} ganhou!!!`);
         }};
         
-        // Botão ADD +1 ponto
+        // Botão 1 ADD +1 ponto // interação com o botão 
         btn1.addEventListener('click', ( ) => {
             var valorAtual = parseFloat(contador1.value);
             var novoValor = valorAtual !== 12? valorAtual + 1: 12;
             contador1.value = novoValor;
-
             verificarVitoria1(novoValor);
         });
+        btn1.addEventListener('mousedown', () =>{
+            btn1.style.background = '#4425cf'
+         });
+         btn1.addEventListener('mouseup', () =>{
+            btn1.style.background = '#4c2be2'
+         });
 
-        // Botão REMOVE - 1 ponto
+        // Botão 2 REMOVE - 1 ponto
         btn2.addEventListener('click', ( ) => {
             var valorAtual = parseFloat(contador1.value);
-            var novoValor = valorAtual + 1;
-            novoValor = valorAtual !== 0? valorAtual - 1: 0;
+            var novoValor = valorAtual !== 0? valorAtual - 1: 0;
             contador1.value = novoValor;   
-
             verificarVitoria1(novoValor);
         });
+        btn2.addEventListener('mousedown', () =>{
+            btn2.style.background = '#4425cf'
+         });
+         btn2.addEventListener('mouseup', () =>{
+            btn2.style.background = '#4c2be2'
+         });
 
-        // Botão truco ADD +3 pontos
+        // Botão 3 truco ADD +3 pontos
         btn3.addEventListener('click', function ( ){
             var valorAtual = parseFloat(contador1.value);
             var novoValor = valorAtual !== 12? valorAtual + 3: 12;
             contador1.value = novoValor;
-
             verificarVitoria1(novoValor);
         });
+        btn3.addEventListener('mousedown', () =>{
+            btn3.style.background = '#4425cf'
+         });
+         btn3.addEventListener('mouseup', () =>{
+            btn3.style.background = '#4c2be2'
+         });
 
             // Equipe Azul -- botões de 4 a 6(btn#) + contador 2
         const contador2 = document.getElementById('contador2');
@@ -120,29 +182,47 @@
                 window.alert(`${EquipeNome} ganhou!!!`);
         }};
     
-        // Botão ADD +1 ponto
+        // Botão 4 ADD +1 ponto
         btn4.addEventListener('click', () => {
             var valorAtual = parseFloat(contador2.value);
             var novoValor = valorAtual !== 12 ? valorAtual + 1 : 12;
             contador2.value = novoValor;
             verificarVitoria(novoValor);
         });
+        btn4.addEventListener('mousedown', () =>{
+            btn4.style.background = '#bb2222'
+         });
+         btn4.addEventListener('mouseup', () =>{
+            btn4.style.background = '#d62626'
+         });
 
-        // Botão REMOVE - 1 ponto
+        // Botão 5 REMOVE - 1 ponto
         btn5.addEventListener('click', () => {
             var valorAtual = parseFloat(contador2.value);
             var novoValor = valorAtual !== 0 ? valorAtual - 1 : 0;
             contador2.value = novoValor;
             verificarVitoria(novoValor);
         });
+        btn5.addEventListener('mousedown', () =>{
+            btn5.style.background = '#bb2222'
+         });
+         btn5.addEventListener('mouseup', () =>{
+            btn5.style.background = '#d62626'
+         });
 
-        // Botão truco ADD +3 pontos
+        // Botão 6 truco ADD +3 pontos
         btn6.addEventListener('click', () => {
             var valorAtual = parseFloat(contador2.value);
             var novoValor = valorAtual !== 12 ? valorAtual + 3 : 12;
             contador2.value = novoValor;
             verificarVitoria(novoValor);
         });
+        btn6.addEventListener('mousedown', () =>{
+            btn6.style.background = '#bb2222'
+         });
+         btn6.addEventListener('mouseup', () =>{
+            btn6.style.background = '#d62626'
+         });
     </script>
     
 </body>
