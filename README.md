@@ -3,5 +3,5 @@
 
  Estou aprendendo JavaScript e apresentando a minha criação do contador de truco!
 
- São dois placares individuais que contam de 0 a 12. No "Nome da equipe" você consegue inserir o nome que quiser.
- Quando o placar chegar em 12, exibira uma mensagem com o nome da equipe vencedora.
+ São dois placares individuais que contam de 0 a 12. Quando o placar chegar em 12, exibira uma mensagem com o nome da equipe vencedora.
+ No "Nome da equipe" você consegue inserir o nome que quiser com o maximo de 15 caracteres.
