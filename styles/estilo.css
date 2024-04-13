@@ -55,7 +55,7 @@ section{
     display: none;
     position: absolute;
     top: 0; 
-    left: 0; 
+    left: 0rem; 
     background-color: rgb(92, 92, 92);
     background-color:rgb(92, 92, 92);
     border-bottom: 3px solid aliceblue;
@@ -71,7 +71,7 @@ section{
     display: none;
     position: absolute;
     top: 0; 
-    right: 0; 
+    right: 0rem; 
     background-color: rgb(92, 92, 92);
     background-color:rgb(92, 92, 92);
     border-bottom: 3px solid aliceblue;
